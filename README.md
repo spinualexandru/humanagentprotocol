@@ -1,24 +1,14 @@
 # HAP — Human-Agent Protocol
+![Screencast_20260206_173709-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/77f8e6ad-29ce-45e3-b45b-a0b69f36881a)
 
 A universal protocol for symbiotic collaboration between humans and autonomous AI agents.
 
 HAP enables AI agents to request human decisions in a structured, auditable, and latency-safe manner. Agents never block — they create tickets with defined timeout behaviors, allowing graceful degradation or escalation.
 
-## Architecture
+---
+<img width="2436" height="1410" alt="arch" src="https://github.com/user-attachments/assets/e40eeb5f-8f8c-405b-92f3-198a03d9763e" />
 
-```
-┌─────────────┐     ┌──────────────┐     ┌─────────────────┐
-│  AI Agent    │────▶│  MCP Server  │────▶│  HAP Core       │
-│  (Claude,    │     │  (stdio)     │     │  (SQLite + FSM) │
-│   Codex,     │     └──────────────┘     └────────┬────────┘
-│   Copilot)   │                                   │
-└─────────────┘                          ┌─────────┴─────────┐
-                                         │                   │
-                                    ┌────┴────┐      ┌───────┴───────┐
-                                    │  CLI    │      │  Tauri App    │
-                                    │  (hap)  │      │  (Desktop UI) │
-                                    └─────────┘      └───────────────┘
-```
+---
 
 **Shared SQLite database** (`~/.hap/hap.db`) connects all components. The MCP server exposes HAP operations as tools that any AI agent can call. Humans approve/reject via CLI or desktop app.
 
@@ -27,7 +17,7 @@ HAP enables AI agents to request human decisions in a structured, auditable, and
 ### 1. Install
 
 ```bash
-git clone https://github.com/cortiq/hap.git
+git clone https://github.com/spinualexandru/humanagentprotocol.git
 cd hap
 npm install
 ```
