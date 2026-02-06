@@ -1,0 +1,33 @@
+node_modules/
+dist/
+target/
+gen/
+*.db
+.hap/
+Cargo.lock
+
+# Environment and secrets
+.env
+.env.*
+
+# Logs
+*.log
+
+# TypeScript
+*.tsbuildinfo
+
+# Test coverage
+coverage/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Claude Code
+.claude/
+
+# Editors
+.idea/
+.zed/
+.vscode/
+docs/

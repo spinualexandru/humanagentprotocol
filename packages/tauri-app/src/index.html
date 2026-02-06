@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAP Approval</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>HAP Approval</h1>
+    <div class="controls">
+      <button id="refresh-btn" title="Refresh">&#x21bb; Refresh</button>
+      <label><input type="checkbox" id="show-all"> Show resolved</label>
+    </div>
+  </header>
+
+  <main>
+    <div id="ticket-list"></div>
+  </main>
+
+  <div id="ticket-detail" class="hidden">
+    <div class="detail-overlay"></div>
+    <div class="detail-panel">
+      <button class="close-btn">&times;</button>
+      <div id="detail-content"></div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
